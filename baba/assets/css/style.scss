@@ -1,0 +1,175 @@
+$bg_color: #FBF6F6;
+$font_color: #504949;
+
+@font-face {
+    font-family:cormorant;
+    src: url('../fonts/Cormorant-Bold.ttf');
+    font-weight: 700px;
+}
+
+@font-face {
+    font-family:cormorant;
+    src: url('../fonts/Cormorant-Medium.ttf');
+    font-weight: 500px;
+}
+
+@font-face {
+    font-family:cormorant;
+    src: url('../fonts/Cormorant-Regular.ttf');
+    font-weight: 400px;
+}
+
+@font-face {
+    font-family:cormorant;
+    src: url('../fonts/Cormorant-SemiBold.ttf');
+    font-weight: 600px;
+}
+
+
+
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+a{
+    text-decoration: none;
+}
+
+li{
+    list-style: none;
+}
+
+body{
+    font-family: cormorant;
+    color: $font_color;
+    font-size: 18px;
+    font-weight: 400px;
+}
+
+.container{
+    max-width: 1170px;
+    margin: 0px auto;
+    @media (max-width: 376px) {
+        max-width: unset;
+        padding: 0 37px;
+    }
+}
+
+.header{
+    padding: 20px 0px;
+    &__burger{
+        display: none;
+        @media (max-width:376) {
+            display: block;
+        }
+    }
+    
+    &__menu{
+        display: flex;
+        gap: 40px;
+        @media (max-width:376) {
+            display: none;
+        }
+    }
+
+    &__nav{
+        display: flex;
+        justify-content: flex-end;
+    }
+    &__link{
+        font-weight: 400px;
+        &:hover{
+            font-weight: 700px;
+        }
+    }
+}
+
+.main{
+
+    background-color: $bg_color;
+    padding: 77px 0 122px 0;
+    &__text{
+        &_bold{
+            font-weight: 700px;
+            margin-left: 107px;
+            margin-bottom: 0px;
+            
+        }
+    }
+
+    &__title{
+        font-weight: 600px;
+        font-size: 80px;
+    }
+
+    &__box{
+        display: flex;
+        gap: 79px;
+    }
+
+    
+    &__info{
+        display: flex;
+        gap: 40px;
+        margin-bottom: 38px;
+    }
+
+    &__dig{
+        font-size: 50px;
+    }
+
+    &__subtitle{
+        font-size: 40px;
+        font-weight: 700px;
+        max-width: 517px;
+        margin-bottom: 17px;
+    }
+
+    &__item{
+        max-width: 419px;
+        margin-bottom: 10px;
+        &_first{
+            display: flex;
+            gap: 23px;
+            &::before{
+                content: 1;
+                font-size: 50px;
+                line-height: 0.8px;
+            }
+        }
+
+
+
+        &_second{
+            display: flex;
+            gap: 23px;
+            &::before{
+                content: 2;
+                font-size: 50px;
+                line-height: 0.8px;
+            }
+        }
+
+        &_third{
+            display: flex;
+            gap: 23px;
+            &::before{
+                content: 3;
+                font-size: 50px;
+                line-height: 0.8px;
+            }
+        }
+
+        &_fourth{
+            display: flex;
+            gap: 23px;
+            &::before{
+                content: 4;
+                font-size: 50px;
+                line-height: 0.8px;
+            }
+        }
+    }
+}
